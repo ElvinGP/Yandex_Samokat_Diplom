@@ -1,12 +1,6 @@
-SELECT 
-    c.login, 
-    COUNT(o.id) AS orders_in_delivery
-FROM 
-    couriers c
-LEFT JOIN 
-    orders o 
-ON 
-    c.id = o.courier_id 
-    AND o.inDelivery = true
-GROUP BY 
-    c.login;
+SELECT c.login, COUNT(o.id) AS "deliveryCount"
+FROM "Couriers" AS c
+LEFT JOIN "Orders" AS o ON c.id = o."courierId"
+WHERE 
+     o."inDelivery" = true
+GROUP BY c.login;
