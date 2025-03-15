@@ -1,3 +1,4 @@
+# Гаджиев Эльвин 27 кагорта - Финальный проект. Инженер по тестированию плюс. 
 # samokat_kit_name_samokat_test.py
 import sender_stand_request
 from data import order_data_1
